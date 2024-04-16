@@ -67,3 +67,16 @@ body, html {
 .middle-box:hover {
     background-image: url('images\engine2.avif'); /* Replace 'preset_image.jpg' with the path to your preset image */
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aliceblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.5rem;
+}
+
