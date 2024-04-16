@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.box {
+    flex: 1;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.left-box, .right-box {
+    flex: 1;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.middle-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 2;
+}
+
+.middle-box {
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+/* Add this CSS to change background images on hover */
+.box:hover {
+    background-image: url('images\engine1.jpeg'); /* Replace 'preset_image.jpg' with the path to your preset image */
+}
+
+.middle-box:hover {
+    background-image: url('images\engine2.avif'); /* Replace 'preset_image.jpg' with the path to your preset image */
+}
