@@ -5,24 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F-15 EAGLE</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const boxes = document.querySelectorAll(".box");
+    
+        boxes.forEach(box => {
+            box.addEventListener("mouseover", function() {
+                const boxId = this.getAttribute("id");
+                const images = {
+                    about: "about_image.jpg",
+                    weapons: "weapons_image.jpg",
+                    contact: "contact_image.jpg",
+                    airframe: "airframe_image.jpg",
+                    engine: "engine_image.jpg",
+                    history: "history_image.jpg",
+                    records: "records_image.jpg"
+                };
+    
+                document.documentElement.style.setProperty("--current-image", `url('${images[boxId]}')`);
+            });
+        });
+    });
+    </script>
+      <div class="container">
         <h1 class="title">F-15 EAGLE</h1>
         <div class="top-row">
-            <div class="box">About Us</div>
-            <div class="box">Weapons</div>
-            <div class="box">Contact Us</div>
+            <div class="box" id="about"><a href="about.html">About Us</a></div>
+            <div class="box" id="about MD"><a href="MD.html">About Mcdonnel Douglas</a></div>
+            <div class="box" id="contact"><a href="contact.html">Contact Us</a></div>
         </div>
         <div class="middle-container">
-            <div class="left-box"><img src="images\airframe1.jpg" width="400" height="175" ></div>
+            <div class="left-box"><img id="leftImg" src="" width="400" height="175" ></div>
             <div class="middle-column">
-                <div class="middle-box">Airframe</div>
-                <div class="middle-box">Engine</div>
-                <div class="middle-box">History</div>
-                <div class="middle-box">Records</div>
+                <div class="middle-box" id="weapons"><a href="Weapons.html">Weapons</a></div>
+                <div class="middle-box" id="airframe"><a href="Airframe.html">Airframe</a></div>
+                <div class="middle-box" id="engine"><a href="Engine.html">Engine</a></div>
+                <div class="middle-box" id="history"><a href="History.html">History</a></div>
+                <div class="middle-box" id="records"><a href="Records.html">Records</a></div>
             </div>
-            <div class="right-box"><img src="images\airframe2.avif" width="400" height="175" ></div>
+            <div class="right-box"><img id="rightImg" src="" width="400" height="175" ></div>
         </div>
     </div>
 </body>
