@@ -1,3 +1,8 @@
+:root {
+    --current-image1: url('weapons1');
+    --current-image2: url('weapons2');
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -14,6 +19,7 @@ body, html {
 
 .title {
     font-size: 2em;
+    color: black;
 }
 
 .top-row {
@@ -27,7 +33,8 @@ body, html {
     background-color: lightblue;
     text-align: center;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; 
 }
 
 .middle-container {
@@ -38,12 +45,14 @@ body, html {
     margin-top: 20px;
 }
 
+
 .left-box, .right-box {
     flex: 1;
     background-color: lightblue;
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
+    margin-right: 10px; 
 }
 
 .middle-column {
@@ -58,25 +67,13 @@ body, html {
     text-align: center;
     padding: 20px;
     margin-bottom: 20px;
-}
-/* Add this CSS to change background images on hover */
-.box:hover {
-    background-image: url('images\engine1.jpeg'); /* Replace 'preset_image.jpg' with the path to your preset image */
+    margin-right: 10px; /* Adjusted margin-right */
 }
 
-.middle-box:hover {
-    background-image: url('images\engine2.avif'); /* Replace 'preset_image.jpg' with the path to your preset image */
+title:visited{
+    color: black;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: aliceblue;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.5rem;
+.image-right {
+    float: right;
 }
-
