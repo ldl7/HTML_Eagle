@@ -9,25 +9,25 @@
 </head>
 <body>
     <script>document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("rightImg").src="images/weapons1.webp"
-        document.getElementById("leftImg").src="images/weapons2.avif"
+        document.getElementById("rightImg").src="images/default1.jpg"
+        document.getElementById("leftImg").src="images/default2.jpg"
         const boxes = document.querySelectorAll(".middle-box");
     
         boxes.forEach(box => {
             box.addEventListener("mouseover", function() {
                 const boxId = this.getAttribute("id");
                 const images1 = {
-                    weapons: "images/weapons1.webp",
+                    weapons: "images/weapons1.jpg",
                     airframe: "images/airframe1.jpg",
                     engine: "images/engine1.jpeg",
                     history: "images/history1.jpg",
-                    records: "images/records1.jpg"
+                    records: "images/records1.webp"
                 };
                 const images2 = {
-                    weapons: "images/weapons2.avif",
+                    weapons: "images/weapons2.jfif",
                     airframe: "images/airframe2.avif",
-                    engine: "images/engine2.avif",
-                    history: "images/history2.png",
+                    engine: "images/engine2.jpg",
+                    history: "images/history2.jpeg",
                     records: "images/records2.jpg"
                 };
 
