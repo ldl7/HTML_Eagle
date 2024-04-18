@@ -9,35 +9,43 @@
 </head>
 <body>
     <script>document.addEventListener("DOMContentLoaded", function() {
-        const boxes = document.querySelectorAll(".box");
+        document.getElementById("rightImg").src="images/weapons1.webp"
+        document.getElementById("leftImg").src="images/weapons2.avif"
+        const boxes = document.querySelectorAll(".middle-box");
     
         boxes.forEach(box => {
             box.addEventListener("mouseover", function() {
                 const boxId = this.getAttribute("id");
-                const images = {
-                    about: "about_image.jpg",
-                    weapons: "weapons_image.jpg",
-                    contact: "contact_image.jpg",
-                    airframe: "airframe_image.jpg",
-                    engine: "engine_image.jpg",
-                    history: "history_image.jpg",
-                    records: "records_image.jpg"
+                const images1 = {
+                    weapons: "images/weapons1.webp",
+                    airframe: "images/airframe1.jpg",
+                    engine: "images/engine1.jpeg",
+                    history: "images/history1.jpg",
+                    records: "images/records1.jpg"
                 };
-    
-                document.documentElement.style.setProperty("--current-image", `url('${images[boxId]}')`);
+                const images2 = {
+                    weapons: "images/weapons2.avif",
+                    airframe: "images/airframe2.avif",
+                    engine: "images/engine2.avif",
+                    history: "images/history2.png",
+                    records: "images/records2.jpg"
+                };
+
+                document.getElementById("rightImg").src=images2[boxId]
+                document.getElementById("leftImg").src=images1[boxId]
             });
         });
     });
     </script>
       <div class="container">
-        <h1 class="title">F-15 EAGLE</h1>
+        <h1 class="title" href="new_landing_page.html" style="text-decoration: none">F-15 EAGLE</h1>
         <div class="top-row">
-            <div class="box" id="about"><a href="about.html">About Us</a></div>
-            <div class="box" id="about MD"><a href="MD.html">About Mcdonnel Douglas</a></div>
+            <div class="box" id="about"><a href="About.html">About Us</a></div>
+            <div class="box" id="about MD"><a href="MD.html">About McDonnell Douglas</a></div>
             <div class="box" id="contact"><a href="contact.html">Contact Us</a></div>
         </div>
         <div class="middle-container">
-            <div class="left-box"><img id="leftImg" src="" width="400" height="175" ></div>
+            <div class="left-box"><img id="leftImg" src=current_image2 width="400" height="375" ></div>
             <div class="middle-column">
                 <div class="middle-box" id="weapons"><a href="Weapons.html">Weapons</a></div>
                 <div class="middle-box" id="airframe"><a href="Airframe.html">Airframe</a></div>
@@ -45,11 +53,8 @@
                 <div class="middle-box" id="history"><a href="History.html">History</a></div>
                 <div class="middle-box" id="records"><a href="Records.html">Records</a></div>
             </div>
-            <div class="right-box"><img id="rightImg" src="" width="400" height="175" ></div>
+            <div class="right-box"><img id="rightImg" src="current_image1" width="400" height="375" ></div>
         </div>
     </div>
-    <footer>
-<p>Leonel Lourenco  |  April 16 2024  |  Terms of Service  |  Privacy Statement</p>
-    </footer>
 </body>
 </html>
